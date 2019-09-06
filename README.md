@@ -29,7 +29,7 @@ environments:
 Generate `config.yml` running
 
 ```
-yml-exapander -data.path=data.yml -template.path=config.yml.tpl -output.path=config.yml
+yml-expander -data.path=data.yml -template.path=config.yml.tpl -output.path=config.yml
 ```
 
 The output will be:
