@@ -1,0 +1,18 @@
+samples:
+  - name: short
+    interval: 30s
+    buckets:
+      - 5m
+      - 30m
+      - 1h
+
+  - name: medium
+    interval: 2m
+    buckets:
+      - 2h
+      - 6h
+
+  - name: daily
+    interval: 5m
+    buckets:
+      - 1d
