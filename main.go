@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
 
 	"html/template"
 
@@ -23,14 +24,12 @@ func main() {
 
 	flag.Parse()
 
-	tpl := template.Must(template.ParseFiles(templatePath))
+	tpl := template.Must(template.ParseFiles(strings.Split(templatePath, ",")...))
 
 	dataFile, err := os.Open(dataPath)
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	fmt.Println(dataFile)
 
 	ctx := map[string]interface{}{}
 
